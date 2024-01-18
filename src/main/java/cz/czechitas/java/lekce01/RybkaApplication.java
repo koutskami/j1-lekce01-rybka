@@ -20,7 +20,7 @@ public class RybkaApplication extends CzechitasGameApplication {
     settings.setNative(true);
     settings.setWidth(800);
     settings.setHeight(600);
-    settings.setTitle("Rybka Renata");
+    settings.setTitle("Rybka Radana");
     settings.setVersion("1.0");
   }
 
@@ -34,5 +34,21 @@ public class RybkaApplication extends CzechitasGameApplication {
   protected void onStart() {
     kamen = new Kamen(200, 200);
     rybka = new Rybka(100, 100);
+    for (int i = 0; i < 20; i++) {
+      //chci aby rybka poplavala doprava o 20
+      rybka.plavatVpravo();
+    }
+    for (int i = 0; i < 20; i++) {
+      //chci aby rybka poplavala dolu o 20
+      rybka.plavatDolu();
+    }
+    for (int i = 0; i < 20; i++) {
+      //chci aby rybka poplavala doleva o 20
+      rybka.plavatVlevo();
+    }
+    for (int i = 0; i < 20; i++) {
+      //chci aby rybka poplavala nahoru o 20
+      rybka.plavatNahoru();
+    }
   }
 }
